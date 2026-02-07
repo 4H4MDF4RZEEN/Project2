@@ -11,7 +11,7 @@
 
   const initial = saved || getSystemPref();
   document.documentElement.setAttribute('data-theme', initial);
-  if (toggle) toggle.textContent = initial === 'dark' ? '☀️' : '🌙';
+  if (toggle) toggle.textContent = initial === 'dark' ? '🌕' : '🌑';
 
   if (toggle) {
     toggle.addEventListener('click', () => {
@@ -19,7 +19,7 @@
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       try { localStorage.setItem(themeKey, next); } catch (e) {}
-      toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+      toggle.textContent = next === 'dark' ? '🌕' : '🌑';
     });
   }
 
@@ -29,13 +29,13 @@
       mq.addEventListener('change', e => {
         const newPref = e.matches ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', newPref);
-        if (toggle) toggle.textContent = newPref === 'dark' ? '☀️' : '🌙';
+        if (toggle) toggle.textContent = newPref === 'dark' ? '🌕' : '🌑';
       });
     } else if (typeof mq.addListener === 'function') {
       mq.addListener(e => {
         const newPref = e.matches ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', newPref);
-        if (toggle) toggle.textContent = newPref === 'dark' ? '☀️' : '🌙';
+        if (toggle) toggle.textContent = newPref === 'dark' ? '🌕' : '🌑';
       });
     }
   }

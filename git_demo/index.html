@@ -3,67 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio</title>
+  <title>Alex — Minecraft Portfolio</title>
+
+  <!-- Pixel font (Minecraft-style) -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for social icons (kept) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Hi, I'm Alex</h1>
-    <p>Frontend Developer</p>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-      </ul>
-    </nav>
-    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <div class="header-inner">
+      <div class="avatar-block">
+        <!-- simple blocky avatar using CSS background (or replace with image) -->
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="name">
+          <h1>Alex</h1>
+          <p>Frontend Developer</p>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" aria-label="Toggle theme">🌑</button>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I build clean, user-friendly web applications and love learning new technologies.</p>
-  </section>
+  <main>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>I build clean, user-friendly web applications and enjoy crafting pixel-perfect interfaces.</p>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Node.js</li>
-    </ul>
-  </section>
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+      </ul>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Here are some of my projects:</p>
-    <ul>
-      <li><a href="#">Project 1</a></li>
-      <li><a href="#">Project 2</a></li>
-      <li><a href="#">Project 3</a></li>
-    </ul>
-  </section>
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <p>Here are some of my projects:</p>
+      <ul class="projects-list">
+        <li><a href="#">Project 1</a></li>
+        <li><a href="#">Project 2</a></li>
+        <li><a href="#">Project 3</a></li>
+      </ul>
+    </section>
 
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <p>"Alex is a talented developer who produces high-quality work!" - Client</p>
-  </section>
+    <section id="testimonials" class="card">
+      <h2>Testimonials</h2>
+      <p>"Alex is a talented developer who produces high-quality work!" — Client</p>
+    </section>
 
-  <section id="cta">
-    <button>Contact Me</button>
-  </section>
+    <section id="cta" class="card cta-card">
+      <button class="cta">Contact Me</button>
+    </section>
+  </main>
 
   <footer>
     <h2>Connect with Me</h2>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-github" aria-hidden="true"></i></a>
-      <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-      <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
     </div>
+    <p class="muted">Built with pixel blocks • 2026</p>
   </footer>
 
   <script src="script.js"></script>
